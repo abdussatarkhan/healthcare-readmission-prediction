@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: mimic_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: mimic_iv
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/queries.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pipeline:
+    build: .
+    container_name: readmission_pipeline
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_PASSWORD=postgrespassword
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+      - ./images:/app/images
+    command: >
+      bash -c "python scripts/data_collection.py --source all --generate-synthetic &&
+               python scripts/preprocessing.py &&
+               python scripts/feature_engineering.py &&
+               python scripts/model_training.py &&
+               python scripts/evaluation.py &&
+               python scripts/hypothesis_testing.py"
+
+volumes:
+  postgres_data:

@@ -1,0 +1,30 @@
+{
+  "model_type": "XGBClassifier",
+  "n_features": 64,
+  "hyperparameters": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "learning_rate": "0.05",
+    "max_depth": "6",
+    "n_estimators": "400",
+    "subsample": "0.8",
+    "colsample_bytree": "0.8",
+    "min_child_weight": "3",
+    "gamma": "0.1",
+    "scale_pos_weight": "3.5",
+    "tree_method": "hist",
+    "random_state": "42"
+  },
+  "metrics": {
+    "oof_auc": 0.4802,
+    "oof_prauc": 0.035,
+    "oof_brier": 0.0361,
+    "mean_fold_auc": 0.4812,
+    "std_fold_auc": 0.0152,
+    "test_roc_auc": 0.5221,
+    "test_pr_auc": 0.0373,
+    "test_brier_score": 0.0359,
+    "test_accuracy": 0.9635,
+    "test_f1_score": 0.0
+  }
+}
