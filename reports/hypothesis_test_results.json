@@ -1,0 +1,110 @@
+{
+  "is_weekend_discharge": {
+    "description": "Weekend vs Weekday Discharge",
+    "bivariate_test": {
+      "hypothesis": "Independence between is_weekend_discharge and readmitted_30d",
+      "sample_size": 11511,
+      "chi2_statistic": 0.7188,
+      "degrees_of_freedom": 1,
+      "p_value": 0.3965322557949892,
+      "significance_level": 0.05,
+      "statistically_significant": false,
+      "odds_ratio": 0.9035,
+      "odds_ratio_95_ci": [
+        0.7248,
+        1.1263
+      ],
+      "fisher_exact_p_value": 0.3788197558526102,
+      "cramers_v": 0.0079
+    },
+    "adjusted_multivariate_test": {
+      "formula": "readmitted_30d ~ is_weekend_discharge + anchor_age + charlson_age_adjusted_score + los_days + prior_admissions_count",
+      "covariates_controlled": [
+        "anchor_age",
+        "charlson_age_adjusted_score",
+        "los_days",
+        "prior_admissions_count"
+      ],
+      "timing_coefficient": -0.0986,
+      "timing_p_value": 0.380541985327432,
+      "adjusted_odds_ratio": 0.9061,
+      "adjusted_95_ci": [
+        0.7268,
+        1.1296
+      ],
+      "pseudo_r_squared": 0.0012
+    }
+  },
+  "is_evening_discharge": {
+    "description": "Evening (>=17:00) vs Daytime Discharge",
+    "bivariate_test": {
+      "hypothesis": "Independence between is_evening_discharge and readmitted_30d",
+      "sample_size": 11511,
+      "chi2_statistic": 0.0471,
+      "degrees_of_freedom": 1,
+      "p_value": 0.8282383163841323,
+      "significance_level": 0.05,
+      "statistically_significant": false,
+      "odds_ratio": 1.0299,
+      "odds_ratio_95_ci": [
+        0.8327,
+        1.2737
+      ],
+      "fisher_exact_p_value": 0.7853799925071984,
+      "cramers_v": 0.002
+    },
+    "adjusted_multivariate_test": {
+      "formula": "readmitted_30d ~ is_evening_discharge + anchor_age + charlson_age_adjusted_score + los_days + prior_admissions_count",
+      "covariates_controlled": [
+        "anchor_age",
+        "charlson_age_adjusted_score",
+        "los_days",
+        "prior_admissions_count"
+      ],
+      "timing_coefficient": 0.0293,
+      "timing_p_value": 0.7871187606992748,
+      "adjusted_odds_ratio": 1.0297,
+      "adjusted_95_ci": [
+        0.8326,
+        1.2736
+      ],
+      "pseudo_r_squared": 0.001
+    }
+  },
+  "discharge_friday_afternoon": {
+    "description": "Friday Afternoon vs Other Discharge",
+    "bivariate_test": {
+      "hypothesis": "Independence between discharge_friday_afternoon and readmitted_30d",
+      "sample_size": 11511,
+      "chi2_statistic": 1.5283,
+      "degrees_of_freedom": 1,
+      "p_value": 0.2163679100066149,
+      "significance_level": 0.05,
+      "statistically_significant": false,
+      "odds_ratio": 1.3027,
+      "odds_ratio_95_ci": [
+        0.8854,
+        1.9166
+      ],
+      "fisher_exact_p_value": 0.18724562082047425,
+      "cramers_v": 0.0115
+    },
+    "adjusted_multivariate_test": {
+      "formula": "readmitted_30d ~ discharge_friday_afternoon + anchor_age + charlson_age_adjusted_score + los_days + prior_admissions_count",
+      "covariates_controlled": [
+        "anchor_age",
+        "charlson_age_adjusted_score",
+        "los_days",
+        "prior_admissions_count"
+      ],
+      "timing_coefficient": 0.2593,
+      "timing_p_value": 0.1883776192714618,
+      "adjusted_odds_ratio": 1.296,
+      "adjusted_95_ci": [
+        0.8807,
+        1.9072
+      ],
+      "pseudo_r_squared": 0.0014
+    }
+  }
+}

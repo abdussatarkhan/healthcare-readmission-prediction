@@ -1,5 +1,6 @@
 # Data files
-data/raw/
+data/raw/*
+!data/raw/README.md
 *.csv
 *.parquet
 *.pkl
