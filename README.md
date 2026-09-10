@@ -1,5 +1,6 @@
 # Clinical 30-Day Hospital Readmission Risk Stratifier
 
+[![CI](https://github.com/abdussatarkhan/healthcare-readmission-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/abdussatarkhan/healthcare-readmission-prediction/actions)
 [![XGBoost](https://img.shields.io/badge/XGBoost-Clinical_ML-EB5424?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/) [![SHAP](https://img.shields.io/badge/Explainability-SHAP-00C896?style=for-the-badge)](https://shap.readthedocs.io/) [![Python](https://img.shields.io/badge/Python-EHR_Analytics-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Author](https://img.shields.io/badge/Author-Abdussatar-E50914?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abdussatarkhan)
 
@@ -55,6 +56,16 @@ source venv/bin/activate  # On Windows: .\venv\Scripts\activate
 # Install dependencies (if requirements.txt exists)
 pip install -r requirements.txt
 ```
+
+---
+
+## 🗺️ Roadmap & Upcoming Features
+
+- [x] 30-day all-cause readmission prediction on MIMIC-IV and CMS HRRP
+- [x] TreeSHAP feature attribution & explainability plots
+- [ ] Interactive Streamlit bedside clinical risk calculator
+- [ ] Demographic fairness and algorithmic bias auditing
+- [ ] FHIR / HL7 clinical data ingestion interface
 
 ---
 
