@@ -1,7 +1,7 @@
 # Clinical 30-Day Hospital Readmission Risk Stratifier
 
 [![XGBoost](https://img.shields.io/badge/XGBoost-Clinical_ML-EB5424?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/) [![SHAP](https://img.shields.io/badge/Explainability-SHAP-00C896?style=for-the-badge)](https://shap.readthedocs.io/) [![Python](https://img.shields.io/badge/Python-EHR_Analytics-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Author](https://img.shields.io/badge/Author-Abdussatar-E50914?style=for-the-badge&logo=github&logoColor=white)](https://github.com/satarabdus692-bot)
+[![Author](https://img.shields.io/badge/Author-Abdussatar-E50914?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abdussatarkhan)
 
 > **An explainable machine learning risk stratifier trained on CMS HRRP and MIMIC-IV electronic health records (EHR) utilizing XGBoost and SHAP interpretability to prevent 30-day all-cause hospital readmissions.**
 
@@ -42,7 +42,7 @@ graph TD
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/satarabdus692-bot/healthcare-readmission-prediction.git
+git clone https://github.com/abdussatarkhan/healthcare-readmission-prediction.git
 cd healthcare-readmission-prediction
 ```
 
@@ -60,8 +60,8 @@ pip install -r requirements.txt
 
 ## 👨‍💻 Author & Profile
 
-Built and maintained by **Abdussatar** ([@satarabdus692-bot](https://github.com/satarabdus692-bot)).  
-For technical discussions, collaboration, or queries, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/abdus-satar-5150813b5/) or [GitHub](https://github.com/satarabdus692-bot).
+Built and maintained by **Abdussatar** ([@abdussatarkhan](https://github.com/abdussatarkhan)).  
+For technical discussions, collaboration, or queries, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/abdus-satar-5150813b5/) or [GitHub](https://github.com/abdussatarkhan).
 
 ---
 
