@@ -4,6 +4,15 @@
 # 
 # **Objective:** Develop, optimize, and cross-validate state-of-the-art gradient boosted trees (XGBoost) against classical baselines.
 
+### Evaluation Metrics & Loss Formulations:
+1. **Binary Cross-Entropy (Log Loss)**:
+   $$\mathcal{L}_{\text{BCE}} = -\frac{1}{N} \sum_{i=1}^N \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right]$$
+2. **Brier Calibration Score**:
+   $$\text{BS} = \frac{1}{N} \sum_{i=1}^N (p_i - y_i)^2 \quad \in [0, 1]$$
+3. **Clinical Decision Curve Net Benefit**:
+   $$\text{NB}(p_t) = \frac{\text{TP}}{N} - \frac{\text{FP}}{N} \left(\frac{p_t}{1 - p_t}\right)$$
+   evaluates risk-stratified intervention benefit across clinical threshold probabilities $p_t$.
+
 # %%
 import sys
 from pathlib import Path
